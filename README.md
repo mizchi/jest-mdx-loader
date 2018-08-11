@@ -5,7 +5,7 @@ Jest transformer that wraps mdx-js/mx webpack loader
 ## Install
 
 ```
-yarn add --dev jest-mdx-loader
+yarn add --dev @mizchi/jest-mdx-loader
 ```
 
 ## Usage
@@ -20,39 +20,6 @@ module.exports = {
   transform: {
     "^.+\\.jsx?$": "babel-jest",
     ".mdx?$": "jest-mdx-loader"
-  }
-  //...
-};
-```
-
-If you need to perform any additional pre-processing prior to parsing with mdx you can easily extend the loader as follows:
-
-```js
-// src/my-custom-jest-mdx-loader.js
-
-const createTransformer = require("jest-mdx-loader/src/createTransformer");
-
-preMdxParseCallback = function(src) {
-  var modifiedSrc = src;
-
-  // CUSTOM LOGIC HERE
-
-  return modifiedSrc;
-};
-
-module.exports = {
-  process: createTransformer(preMdxParseCallback)
-};
-```
-
-```js
-/// jest.config.js
-
-module.exports = {
-  //...
-  transform: {
-    "^.+\\.jsx?$": "babel-jest",
-    ".mdx?$": "<rootDir>/src/my-custom-jest-mdx-loader.js"
   }
   //...
 };
