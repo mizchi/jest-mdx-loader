@@ -19,7 +19,8 @@ createTransformer = function(preMdxParseCallback) {
 
     // Transform ES6 with babel
     var babelRes = babel.transform(injectedJSX, {
-      babelrc: true
+      presets: ["@babel/preset-env", "@babel/preset-react"],
+      plugins: ["@babel/plugin-proposal-object-rest-spread"]
     }).code;
 
     return babelRes;

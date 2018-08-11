@@ -1,6 +1,6 @@
 {
   "name": "@mizchi/jest-mdx-loader",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Jest transformer that wraps mdx-js/mx webpack loader",
   "main": "index.js",
   "scripts": {},
@@ -13,14 +13,19 @@
     "mdx"
   ],
   "peerDependencies": {
+    "@babel/core": "*",
     "@mdx-js/loader": "*",
-    "@mdx-js/mdx": "*",
-    "@babel/core": "*"
+    "@mdx-js/mdx": "*"
   },
   "author": "Joseph Black <josephconradblack@gmail.com> (https://josephconradblack.com)",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/JosephConradBlack/jest-mdx-loader/issues"
   },
-  "homepage": "https://github.com/JosephConradBlack/jest-mdx-loader#readme"
+  "homepage": "https://github.com/JosephConradBlack/jest-mdx-loader#readme",
+  "dependencies": {
+    "@babel/plugin-proposal-object-rest-spread": "^7.0.0-rc.1",
+    "@babel/preset-env": "^7.0.0-rc.1",
+    "@babel/preset-react": "^7.0.0-rc.1"
+  }
 }
