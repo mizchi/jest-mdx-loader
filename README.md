@@ -1,6 +1,10 @@
-# jest-mdx-loader
+# @mizchi/jest-mdx-loader
 
 Jest transformer that wraps mdx-js/mx webpack loader
+
+---
+
+Forked by @mizchi for babel 7
 
 ## Install
 
@@ -19,7 +23,7 @@ module.exports = {
   //...
   transform: {
     "^.+\\.jsx?$": "babel-jest",
-    ".mdx?$": "jest-mdx-loader"
+    ".mdx?$": "@mizchi/jest-mdx-loader"
   }
   //...
 };
@@ -27,4 +31,4 @@ module.exports = {
 
 ## Licence
 
-MIT © [Joseph Black](https://josephconradblack.com)
+MIT
