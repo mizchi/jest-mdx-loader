@@ -1,5 +1,5 @@
 {
-  "name": "jest-mdx-loader",
+  "name": "@mizchi/jest-mdx-loader",
   "version": "0.1.1",
   "description": "Jest transformer that wraps mdx-js/mx webpack loader",
   "main": "index.js",
@@ -12,10 +12,10 @@
     "jest",
     "mdx"
   ],
-  "devDependencies": {
-    "@mdx-js/loader": "^0.15.0",
-    "@mdx-js/mdx": "^0.15.0",
-    "babel-core": "^6.26.3"
+  "peerDependencies": {
+    "@mdx-js/loader": "*",
+    "@mdx-js/mdx": "*",
+    "@babel/core": "*"
   },
   "author": "Joseph Black <josephconradblack@gmail.com> (https://josephconradblack.com)",
   "license": "MIT",
